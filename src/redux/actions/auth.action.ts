@@ -30,8 +30,6 @@ export const login = (user: LoginRequest) => {
             const result = await LoginService.login(user);
 
             if (result && result.token) {
-
-                debugger; 
                 localStorage.setItem("@token", result.token);
                 dispatch(setProfile(result));
                 dispatch(loginSuccess());
