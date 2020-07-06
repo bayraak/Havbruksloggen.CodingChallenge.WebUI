@@ -4,25 +4,28 @@
   "private": true,
   "dependencies": {
     "@manaflair/redux-batch": "^1.0.0",
-    "@types/bootstrap": "^4.3.1",
+    "@types/bootstrap": "^4.5.0",
     "@types/jest": "24.0.16",
-    "@types/node": "^12.6.8",
+    "@types/node": "^12.12.47",
     "@types/react": "16.8.24",
     "@types/react-dom": "16.8.5",
-    "@types/react-redux": "^7.1.2",
+    "@types/react-redux": "^7.1.9",
     "@types/redux": "^3.6.0",
-    "bootstrap": "^4.3.1",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
     "lodash": "^4.17.15",
-    "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.11",
-    "react-dom": "^16.8.6",
-    "react-redux": "^7.1.0",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-router-redux": "^4.0.8",
     "react-scripts": "3.0.1",
-    "redux": "^4.0.4",
+    "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "redux-starter-kit": "^0.6.3",
-    "typescript": "3.5.3",
-    "uuid": "^3.3.2"
+    "typescript": "^3.9.6",
+    "uuid": "^3.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -46,8 +49,10 @@
     ]
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.137",
-    "@types/redux-logger": "^3.0.7",
-    "@types/uuid": "^3.4.5"
+    "@types/lodash": "^4.14.157",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/react-router-redux": "^5.0.18",
+    "@types/redux-logger": "^3.0.8",
+    "@types/uuid": "^3.4.9"
   }
 }

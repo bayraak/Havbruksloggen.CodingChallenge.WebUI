@@ -1,15 +1,16 @@
 import { IAuthState } from "../interfaces/IAuthState";
 import { IAction } from "../interfaces/IAction";
-import { SET_TOKEN, LOADING_FINISHED, LOGOUT } from "../actions/auth.action";
+import { SET_PROFILE, LOADING_FINISHED, LOGOUT, LOGIN } from "../actions/auth.action";
 
 const INITIAL_STATE: IAuthState = {
     token: null,
     isLoading: false,
+    username: null
 };
 
 const auth = (state = INITIAL_STATE, action: IAction) => {
     switch (action.type) {
-        case SET_TOKEN: {
+        case SET_PROFILE: {
             return {
                 ...state,
                 isLoading: false,
