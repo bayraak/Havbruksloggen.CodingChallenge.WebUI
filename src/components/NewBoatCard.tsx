@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Row } from "react-bootstrap";
 
 export interface INewBoatCardProps {
   producer: string;
@@ -12,11 +13,12 @@ export interface INewBoatCardProps {
 }
 
 const NewBoatCard = (props: INewBoatCardProps) => {
+
   return (
     <div className="card">
       <div className="card-body text-center">
         <img
-          src="../assets/img/avatars/teams/team-logo-1.jpg"
+          src={props.imageUrl}
           alt=""
           className="avatar-img rounded"
         />

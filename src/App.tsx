@@ -9,6 +9,7 @@ import PrivateRoute from "./routes/PrivateRoute";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Register } from "./pages/Register";
 import './styles/css/theme.min.css';
+import './styles/css/common.css';
 import './styles/fonts/feather/feather.min.css';
 
 const App: React.FC = () => {

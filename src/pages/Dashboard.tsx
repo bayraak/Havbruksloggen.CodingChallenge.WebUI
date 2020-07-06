@@ -2,27 +2,52 @@ import React, { useState, useEffect } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import NewBoatCard from "../components/NewBoatCard";
 import { BoatService } from "../services/boatService";
+import EmptyBoardCard from "../components/EmptyBoardCard";
+import CreateBoardModal from "../components/CreateBoardModal";
+import { IAppState } from "../redux/interfaces/IState";
+import { useSelector } from "react-redux";
 
 export const Dashboard = () => {
   const [boats, setBoats] = useState([] as any);
+  const [loading, setLoading] = useState(true);
+  const [modalShow, setModalShow] = React.useState(false);
 
   useEffect(() => {
+    setLoading(true);
+
     (async () => {
-      setBoats(await BoatService.getBoats());
+      try {
+        setBoats(await BoatService.getBoats());
+      } catch (err) {
+        setBoats([]);
+      }
+
+      setLoading(false);
     })();
   }, []);
 
   return (
     <Container>
-      <Row>
-        {boats &&
-          boats.length &&
-          boats.map((item: any) => (
-            <Col key={item.id} md={3}>
-              <NewBoatCard {...item} />
+      {!loading && (
+        <>
+          <Row className="mt-5">
+            <h1>Available Boats</h1>
+          </Row>
+          <Row>
+            <Col md={4} onClick={() => setModalShow(true)}>
+              <EmptyBoardCard />
             </Col>
-          ))}
-      </Row>
+            {boats &&
+              boats.length &&
+              boats.map((item: any) => (
+                <Col key={item.id} md={4}>
+                  <NewBoatCard {...item} />
+                </Col>
+              ))}
+          </Row>
+        </>
+      )}
+      <CreateBoardModal show={modalShow} onHide={() => setModalShow(false)} />
     </Container>
   );
 };

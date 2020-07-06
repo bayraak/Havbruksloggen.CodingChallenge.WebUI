@@ -16,7 +16,11 @@ export class BoatService {
     }
 
     static async createBoat(body: BoatRequest): Promise<BoatResponse | null> {
-        const result: AxiosResponse<BoatResponse> = await axiosInstance.get('boats', body);
+        const data = new FormData();
+        data.append('jsonString', JSON.stringify(body));
+
+
+        const result: AxiosResponse<BoatResponse> = await axiosInstance.post('boats', data);
 
         if (result && result.status === 200) {
             return result.data as BoatResponse;

@@ -7,8 +7,8 @@ import { Row, Button, Form, Col } from "react-bootstrap";
 import { useHistory, useLocation, Link } from "react-router-dom";
 
 export const Login = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("string");
+  const [password, setPassword] = useState("string");
 
   const dispatch = useDispatch();
   const history = useHistory();
@@ -53,6 +53,7 @@ export const Login = () => {
             <Form.Group controlId="formBasicEmail">
               <Form.Control
                 onChange={onEmailChange}
+                value={username}
                 type="text"
                 placeholder="Enter your username"
               />
@@ -61,6 +62,7 @@ export const Login = () => {
             <Form.Group controlId="formBasicPassword">
               <Form.Control
                 onChange={onPasswordChange}
+                value={password}
                 type="password"
                 placeholder="Password"
               />
@@ -73,7 +75,7 @@ export const Login = () => {
               <Button onClick={onLoginClicked} variant="primary" type="button">
                 Submit
               </Button>
-              <Link to='/register'>Register</Link>
+              <Link to="/register">Register</Link>
             </div>
           </Col>
         </Row>

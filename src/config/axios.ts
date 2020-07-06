@@ -7,9 +7,9 @@ const axiosInstance = axios.create({
 });
 
 axiosInstance.interceptors.request.use(
-    config => {
+    async config => {
         const state = store.getState();
-        const token = (state.auth && state.auth.token) ? state.auth.token : localStorage.getItem("@token");
+        const token = (state.auth && state.auth.token && state.auth.token.token) ? state.auth.token.token : await localStorage.getItem("@token");
         config.headers.VERSION = 1;
         config.headers.APIKEY = apiKey;
 
