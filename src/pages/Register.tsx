@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { RegisterService } from "../services/registerService";
+import React, { useState } from "react";
 import { RegisterRequest } from "../services/interfaces/RegisterRequest";
 import { useDispatch } from "react-redux";
-import { setProfile, register } from "../redux/actions/auth.action";
+import { register } from "../redux/actions/auth.action";
 import { Row, Button, Form, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 

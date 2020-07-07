@@ -3,7 +3,6 @@ import { Dispatch } from 'redux';
 import { RegisterService } from '../../services/registerService';
 import { LoginRequest } from '../../services/interfaces/LoginRequest';
 import { LoginService } from '../../services/loginService';
-import { push } from 'react-router-redux'
 import { RegisterRequest } from '../../services/interfaces/RegisterRequest';
 
 export const SET_PROFILE = '[AUTH] SET_PROFILE';

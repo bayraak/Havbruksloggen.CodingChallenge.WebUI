@@ -1,6 +1,6 @@
 import { IAuthState } from "../interfaces/IAuthState";
 import { IAction } from "../interfaces/IAction";
-import { SET_PROFILE, LOADING_FINISHED, LOGOUT, LOGIN } from "../actions/auth.action";
+import { SET_PROFILE, LOADING_FINISHED, LOGOUT } from "../actions/auth.action";
 
 const INITIAL_STATE: IAuthState = {
     token: null,

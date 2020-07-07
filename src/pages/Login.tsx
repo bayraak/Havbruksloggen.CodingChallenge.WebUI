@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { LoginService } from "../services/loginService";
 import { LoginRequest } from "../services/interfaces/LoginRequest";
 import { useDispatch } from "react-redux";

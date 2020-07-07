@@ -4,8 +4,6 @@ import NewBoatCard from "../components/NewBoatCard";
 import { BoatService } from "../services/boatService";
 import EmptyBoardCard from "../components/EmptyBoardCard";
 import CreateBoardModal from "../components/CreateBoardModal";
-import { IAppState } from "../redux/interfaces/IState";
-import { useSelector } from "react-redux";
 
 export const Dashboard = () => {
   const [boats, setBoats] = useState([] as any);

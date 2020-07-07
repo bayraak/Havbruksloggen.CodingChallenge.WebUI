@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Row } from "react-bootstrap";
-
+import React from "react";
 export interface INewBoatCardProps {
   producer: string;
   name: string;

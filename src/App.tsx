@@ -6,7 +6,7 @@ import store from "./redux/configureStore";
 import { Login } from "./pages/Login";
 import { Dashboard } from "./pages/Dashboard";
 import PrivateRoute from "./routes/PrivateRoute";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Register } from "./pages/Register";
 import './styles/css/theme.min.css';
 import './styles/css/common.css';
